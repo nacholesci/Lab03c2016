@@ -1,6 +1,7 @@
 package com.example.ignacio.lab03c2016;
 
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.Date;
 import java.util.Random;
 
@@ -25,7 +26,7 @@ public class Trabajo implements Serializable{
         Integer dias = (7+r.nextInt(35));
         long ts =(long) (System.currentTimeMillis()+dias*1000*60*60*24);
         this.fechaEntrega = new Date(ts);
-        this.precioMaximoHora=r.nextDouble()*(10+r.nextInt(100));
+        this.precioMaximoHora= r.nextDouble()*(10+r.nextInt(100));
         this.horasPresupuestadas = dias/ 4+r.nextInt(6);
         this.categoria= Categoria.CATEGORIAS_MOCK[r.nextInt(5)];
     }

@@ -10,7 +10,8 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listaEmpleos;
-    private BaseAdapter<Trabajo> listaTrabajosAdaptador;
+    private Adaptador listaTrabajosAdaptador;
+    private Trabajo mTrabajo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializamos las variables
         listaEmpleos = (ListView) findViewById(R.id.empleosListView);
-        listaTrabajosAdaptador = new BaseAdapter<Trabajo> (this,android.R.layout.simple_list_item_single_choice);
+        listaTrabajosAdaptador = new Adaptador (this,mTrabajo.TRABAJOS_MOCK);
         listaEmpleos.setAdapter(listaTrabajosAdaptador);
-        listaTrabajosAdaptador.addAll(Arrays.asList(Trabajo.TRABAJOS_MOCK));
+
     }
 }
