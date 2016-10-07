@@ -3,7 +3,7 @@ package com.example.ignacio.lab03c2016;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 import java.util.Arrays;
