@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Inicializamos las variables
         listaEmpleos = (ListView) findViewById(R.id.empleosListView);
-        listaTrabajosAdaptador = new Adaptador (this,mTrabajo.TRABAJOS_MOCK);
+        listaTrabajosAdaptador = new Adaptador (this,Trabajo.TRABAJOS_MOCK);
         listaEmpleos.setAdapter(listaTrabajosAdaptador);
 
 
@@ -59,5 +59,19 @@ public class MainActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
 
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode,Intent data) {
+        if (resultCode == RESULT_OK){
+            Trabajo res = (Trabajo) data.getSerializableExtra("resultado");
+            Trabajo[] nuevo = new Trabajo[listaTrabajosAdaptador.getTrabajos().length+1];
+            int i;
+            for (i=0;i<listaTrabajosAdaptador.getTrabajos().length;i++) {
+                nuevo[i]=listaTrabajosAdaptador.getTrabajos()[i];
+            }
+            nuevo[i]=res;
+            listaTrabajosAdaptador.setTrabajos(nuevo);
+            listaTrabajosAdaptador.notifyDataSetChanged();
+        }
     }
 }

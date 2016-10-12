@@ -2,6 +2,7 @@ package com.example.ignacio.lab03c2016;
 
 import java.io.Serializable;
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 

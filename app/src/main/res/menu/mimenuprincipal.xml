@@ -6,4 +6,16 @@
             android:title="CREAR UNA OFERTA"
             app:showAsAction="ifRoom"
             />
+    <item
+        android:id="@+id/idMenu2"
+        android:title="Ver mis ofertas"
+        />
+    <item
+        android:id="@+id/idMenu3"
+        android:title="Configuracion"
+        />
+    <item
+        android:id="@+id/idMenu4"
+        android:title="Salir"
+        />
     </menu>
