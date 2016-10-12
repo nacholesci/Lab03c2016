@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".Main2Activity">
         </activity>
+        <activity android:name=".CrearOfertaActivity">
+        </activity>
     </application>
 
 </manifest>

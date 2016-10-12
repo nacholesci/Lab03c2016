@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/empleosListView"
         android:layout_below="@+id/fechaTextView"
+        android:longClickable="true"
         android:layout_alignParentStart="true"
         />
 
